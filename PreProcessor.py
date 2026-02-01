@@ -5,7 +5,6 @@ import numpy as np
 from copy import copy
 from PIL import Image
 from PIL import ImageDraw
-from numpy.lib.histograms import _histogram_bin_edges_dispatcher
 import math
 import Colors
 from Hand import Hand
@@ -19,7 +18,6 @@ class PreProcessor:
         gaussian_blurred = cv.GaussianBlur(
             src=image, # source-image
             ksize=[5, 5], # kernelsize
-            # sigmaX=1)
             sigmaX=5) 
         cv.imshow("gaussian blurred", gaussian_blurred)
         
